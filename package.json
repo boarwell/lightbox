@@ -1,0 +1,23 @@
+{
+  "name": "lightbox",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gorimori/lightbox.git"
+  },
+  "keywords": [],
+  "author": "gorimori",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gorimori/lightbox/issues"
+  },
+  "homepage": "https://github.com/gorimori/lightbox#readme",
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
