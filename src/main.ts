@@ -95,8 +95,7 @@ const createImage = (src: string): HTMLElement => {
   return img;
 };
 
-// TODO: ここから
-const createImageBox = src => {
+const createImageBox = (src: string): HTMLDivElement => {
   const lightbox = document.createElement("div");
   lightbox.classList.add("p-lightbox");
 
@@ -127,15 +126,10 @@ const createImageBox = src => {
   return lightbox;
 };
 
-/**
- *
- * @param {Event} e
- */
-const onClick = e => {
-  /** @type  {HTMLElement} */
-  const trigger = e.currentTarget;
+const onClick = (e: Event) => {
+  const trigger = e.currentTarget as HTMLElement;
   const src = trigger.getAttribute(LIGHTBOX_SRC_ATTR);
-  if (src === undefined) {
+  if (src === null) {
     throw new Error(`${trigger}に${TRIGGER_SELECTOR}が設定されていない`);
   }
 
@@ -144,7 +138,7 @@ const onClick = e => {
   document.body.style.overflow = "hidden"; // スクロールを止める
 };
 
-export const init = () => {
+export const init = (): void => {
   const targets = Array.from(document.querySelectorAll(TRIGGER_SELECTOR));
   if (targets.length === 0) {
     return;
